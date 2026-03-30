@@ -1,6 +1,6 @@
 <?php
     $admin = true; 
-    if ($admin == true)
+    if ($admin === true)
     { 
         echo "Acesso liberado"; 
     } 

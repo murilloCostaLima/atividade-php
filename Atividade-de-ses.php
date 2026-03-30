@@ -46,7 +46,7 @@ $estadosBrasil = [
     </select>
     <button> Enviar </button>
 <body>
- 
+    
 </body>
- 
+
 </html>

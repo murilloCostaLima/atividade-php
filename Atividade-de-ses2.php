@@ -1,5 +1,5 @@
 <?php
- 
+
 $alunos = [
     ["nome" => "Ana", "idade" => 18, "nota" => 8.5],
     ["nome" => "Bruno", "idade" => 20, "nota" => 7.0],
@@ -14,6 +14,12 @@ $alunos = [
     ["nome" => "Lucas", "idade" => 20, "nota" => 8.9],
     ["nome" => "Mariana", "idade" => 18, "nota" => 9.4],
 ];
+$somaNotas = 0;
+foreach ($alunos as $aluno)
+    {
+        $somaNotas += $aluno['nota'];
+    }
+$media = $somaNotas / Count($alunos);
  ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -25,23 +31,24 @@ $alunos = [
 </head>
 <body>
     <table border="1">
-    <thead>
-        <tr>
-            <th>Nome</th>
-            <th>Idade</th>
-            <th>Nota</th>
-        </tr>
-    </thead>
-    <tbody>
-       <?php foreach ($alunos as $aluno) : ?>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Nota</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($alunos as $aluno) : ?>
                 <tr>
                     <td> <?= $aluno["nome"] ?> </td>
                     <td> <?= $aluno["idade"] ?> </td>
                     <td> <?= $aluno["nota"] ?> </td>
                 </tr>
-        <?php endforeach; ?>
-        </table>
-    </tbody>
+            <?php endforeach; ?>
+       </tbod y>
+    </table>
+    <p><strong>Média da Turma: </strong><?=number_format($media, 2)?></p>
 </body>
  
 </html>
